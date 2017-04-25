@@ -1,0 +1,138 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class levelSelect : MonoBehaviour 
+{
+	public Canvas stageOne;
+	public Canvas stageTwo;
+	public Canvas stageThree;
+	public Button menuOne;
+	public Button menuTwo;
+	public Button menuThree;
+	public Button exitOne;
+	public Button exitTwo;
+	public Button exitThree;
+	public Button yesOne;
+	public Button yesTwo;
+	public Button yesThree;
+	public Button back;
+
+  //What happens when this code is activated
+	void Start() 
+	{
+		stageOne.enabled = false;
+		stageTwo.enabled = false;
+		stageThree.enabled = false;
+		stageOne = stageOne.GetComponent<Canvas> ();
+		stageTwo = stageTwo.GetComponent<Canvas> ();
+		stageThree = stageThree.GetComponent<Canvas> ();
+		menuOne = menuOne.GetComponent<Button> ();
+		menuTwo = menuOne.GetComponent<Button> ();
+		menuThree = menuOne.GetComponent<Button> ();
+		exitOne = exitOne.GetComponent<Button> ();
+		yesOne = yesOne.GetComponent<Button> ();
+		yesTwo = yesTwo.GetComponent<Button> ();
+		yesThree = yesThree.GetComponent<Button> ();
+		back = back.GetComponent<Button> ();
+
+
+	}
+  //What happens when stage one is press
+	public void OnePress()
+	{
+		stageOne.enabled = true;
+		stageTwo.enabled = false;
+		stageThree.enabled = false;
+		menuOne.enabled = false;
+		menuTwo.enabled = false;
+		menuThree.enabled = false;
+		exitOne.enabled = true;
+		exitTwo.enabled = false;
+		exitThree.enabled = false;
+		yesOne.enabled = true;
+		yesTwo.enabled = false;
+		yesThree.enabled = false;
+		back.enabled = false;
+
+	}
+  //what happens when stage two is pressed
+	public void TwoPress()
+	{
+		stageOne.enabled = false;
+		stageTwo.enabled = true;
+		stageThree.enabled = false;
+		menuOne.enabled = false;
+		menuTwo.enabled = false;
+		menuThree.enabled = false;
+		exitOne.enabled = false;
+		exitTwo.enabled = true;
+		exitThree.enabled = false;
+		yesOne.enabled = false;
+		yesTwo.enabled = true;
+		yesThree.enabled = false;
+		back.enabled = false;
+	}
+  //what happens when stage three is pressed
+	public void ThreePress()
+	{
+		stageOne.enabled = false;
+		stageTwo.enabled = false;
+		stageThree.enabled = true;
+		menuOne.enabled = false;
+		menuTwo.enabled = false;
+		menuThree.enabled = false;
+		exitOne.enabled = false;
+		exitTwo.enabled = false;
+		exitThree.enabled = true;
+		yesOne.enabled = false;
+		yesTwo.enabled = false;
+		yesThree.enabled = true;
+		back.enabled = false;
+	}
+  //Used to load file of stage one
+	public void startOne()
+	{
+		SceneManager.LoadScene("ASD");
+	}
+  //Used to load file of stage two
+	public void startTwo()
+	{
+		SceneManager.LoadScene("");
+	}
+	public void startThree()
+  //Used to load file of stage three
+	{
+		SceneManager.LoadScene("");
+	}
+  //when no button is pressed
+	public void noPress()
+	{
+		stageOne.enabled = false;
+		stageTwo.enabled = false;
+		stageThree.enabled = false;
+		menuOne.enabled = true;
+		menuTwo.enabled = true;
+		menuThree.enabled = true;
+		exitOne.enabled = false;
+		exitTwo.enabled = false;
+		exitThree.enabled = false;
+		yesOne.enabled = false;
+		yesTwo.enabled = false;
+		yesThree.enabled = false;
+		back.enabled = true;
+	}
+  //when the back button is pressed 
+	public void backPress()
+	{
+		SceneManager.LoadScene("titleScreen");
+	}
+  //When the exit button is pressed
+	public void ExitGame()
+	{
+		Application.Quit ();
+	}
+
+}
