@@ -11,7 +11,7 @@ public class popUpText : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		popuptext = popuptext.GetComponent<Canvas> ();
+		popuptext = popuptext.GetComponent<Canvas> ();//the text that pops up is a canvas
 		
 	}
 	
@@ -19,9 +19,9 @@ public class popUpText : MonoBehaviour {
 	void Update () {
 		
 	}
-	void OnTriggerEnter2D(Collider2D other)
+	void OnTriggerEnter2D(Collider2D other) 
 	{
-		if (other.tag == "Player")
+		if (other.tag == "Player") //checks if the players touches the trigger
 			popuptext.enabled = false;
 	}
 }
