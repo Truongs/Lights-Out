@@ -11,13 +11,13 @@ public class moving : MonoBehaviour
 	private Vector3 nexPos;
 
 
-	[SerializeField]
+	[SerializeField] //allows it to become public
 	private float speed;
 
-	[SerializeField]
+	[SerializeField]//allows it to become public
 	private Transform childTransform;
 
-	[SerializeField]
+	[SerializeField]//allows it to become public
 	private Transform transformB;
 
 	// Use this for initialization
@@ -37,14 +37,14 @@ public class moving : MonoBehaviour
 	{
 		childTransform.localPosition = Vector3.MoveTowards (childTransform.localPosition, nexPos, speed * Time.deltaTime);
 
-		if (Vector3.Distance(childTransform.localPosition,nexPos) <= 0.1)
+		if (Vector3.Distance(childTransform.localPosition,nexPos) <= 0.1) //checks if it doesn't pass the nexpos
 		{
-			ChangeDestination();
+			ChangeDestination(); 
 		}
 	}
 	private void ChangeDestination()
 	{
-		nexPos = nexPos != posA ? posA : posB;
+		nexPos = nexPos != posA ? posA : posB; //makes the next positions either posa or posb
 	}
 
 }
