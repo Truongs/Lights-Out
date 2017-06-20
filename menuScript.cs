@@ -31,7 +31,7 @@ public class menuScript : MonoBehaviour
 		
 	}
 
-	public void ExitPress()
+	public void ExitPress() //checks what to enable when exitpress is activates
 	{
 		quitMenu.enabled = true;
 		startText.enabled = false;
@@ -41,7 +41,7 @@ public class menuScript : MonoBehaviour
 
 	}
 
-	public void NoPress()
+	public void NoPress() //checks what to enable when nothing is pressed 
 	{
 		quitMenu.enabled = false;
 		startText.enabled = true;
@@ -51,7 +51,7 @@ public class menuScript : MonoBehaviour
 
 	}
 
-	public void HelpPress()
+	public void HelpPress()//checks what to enable when help is pressed 
 	{
 		quitMenu.enabled = false;
 		startText.enabled = false;
