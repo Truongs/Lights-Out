@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class back : MonoBehaviour {
 
 	// Use this for initialization
-	public void goback() 
+	public void goback() //returns back to the level select
 	{
 		SceneManager.LoadScene ("levelSelect");
 	}
