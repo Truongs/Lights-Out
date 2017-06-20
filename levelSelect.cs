@@ -41,7 +41,7 @@ public class levelSelect : MonoBehaviour
 
 	}
 
-	public void OnePress()
+	public void OnePress() //checks what to enable when stage 1 is pressed 
 	{
 		stageOne.enabled = true;
 		stageTwo.enabled = false;
@@ -59,7 +59,7 @@ public class levelSelect : MonoBehaviour
 
 	}
 
-	public void TwoPress()
+	public void TwoPress() //checks what to enable when stage 2 is pressed 
 	{
 		stageOne.enabled = false;
 		stageTwo.enabled = true;
@@ -76,7 +76,7 @@ public class levelSelect : MonoBehaviour
 		back.enabled = false;
 	}
 
-	public void ThreePress()
+	public void ThreePress() //checks what to enable when stage 3 is pressed 
 	{
 		stageOne.enabled = false;
 		stageTwo.enabled = false;
@@ -92,19 +92,19 @@ public class levelSelect : MonoBehaviour
 		yesThree.enabled = true;
 		back.enabled = false;
 	}
-	public void startOne()
+	public void startOne() //loads scene when stage 1 is pressed
 	{
 		SceneManager.LoadScene("St1Lvl1");
 	}
-	public void startTwo()
+	public void startTwo()//loads scene when stage 2 is pressed
 	{
 		SceneManager.LoadScene("St2Lvl1");
 	}
-	public void startThree()
+	public void startThree()//loads scene when stage 3 is pressed
 	{
 		SceneManager.LoadScene("St3Lvl1");
 	}
-	public void noPress()
+	public void noPress() //checks what to enable when stage nothing is pressed 
 	{
 		stageOne.enabled = false;
 		stageTwo.enabled = false;
@@ -120,7 +120,7 @@ public class levelSelect : MonoBehaviour
 		yesThree.enabled = false;
 		back.enabled = true;
 	}
-	public void backPress()
+	public void backPress() //checks what to enable when back button is pressed 
 	{
 		SceneManager.LoadScene("titleScreen");
 	}
