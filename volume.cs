@@ -6,6 +6,6 @@ public class volume : MonoBehaviour
 {
 	public void Volumecontrol(float volumeControl)
 	{
-		AudioListener.volume = volumeControl;
+		AudioListener.volume = volumeControl; //turns the overall volume into a float
 	}
 }
