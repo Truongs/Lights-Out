@@ -19,7 +19,7 @@ public class Watershot : MonoBehaviour {
 	void Update () 
 	{
 		GetComponent<Rigidbody2D> ().velocity = new Vector2 (speedBubble, GetComponent<Rigidbody2D> ().velocity.y);
-		if(Flip.transform.localScale.x > 0)
+		if(Flip.transform.localScale.x > 0) //determinds the speed of the crates and where is should spawn
 			speedBubble = -speedBubble;
 	}
 
