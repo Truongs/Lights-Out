@@ -8,9 +8,9 @@ public class dontdestroySt3 : MonoBehaviour
 	// Use this for initialization
 	void Awake()
 	{ 
-		GameObject[] objs = GameObject.FindGameObjectsWithTag ("music3");
+		GameObject[] objs = GameObject.FindGameObjectsWithTag ("music3"); //finds gameobjects with tag music3 
 		if (objs.Length > 1)
-			Destroy (this.gameObject);
+			Destroy (this.gameObject); //destroys it 
 
 		DontDestroyOnLoad (this.gameObject);
 
