@@ -10,7 +10,7 @@ namespace UnityStandardAssets._2D
         {
             if (other.tag == "Player")
             {
-				print ("player touched killzone, Restart level");
+				print ("player touched killzone, Restart level"); //when the player touches the killzone, it restarts the level
                 SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
             }
         }
