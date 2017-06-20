@@ -9,8 +9,8 @@ public class dontdestroySt2 : MonoBehaviour
 	void Awake()
 	{ 
 		GameObject[] objs = GameObject.FindGameObjectsWithTag ("music2"); //finds gameobjects with tag music2
-		if (objs.Length > 1)
-			Destroy (this.gameObject); //destroys the object
+		if (objs.Length > 1) 
+			Destroy (this.gameObject); //if there is two, destroys the object
 
 		DontDestroyOnLoad (this.gameObject);
 
